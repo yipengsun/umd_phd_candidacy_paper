@@ -1,16 +1,41 @@
 \documentclass[10pt]{article}
 
 % Page margin
-\usepackage[margin=2in]{geometry}
+\usepackage[margin=1in]{geometry}
+
+% Better typesetting quality
+% also used to customize section style
+\usepackage{microtype}
+
+% Redefine section, subsection styles
+\usepackage[compact,center,explicit]{titlesec}
+\usepackage{textcase}
+\titleformat{\section}{\scshape\lsstyle\normalsize\filcenter}
+    {\thesection}{1em}{\textls{\MakeTextUppercase{#1}}}
+\titleformat{\subsection}{\normalfont\small\bfseries\filcenter}
+    {\thesubsection}{1em}{#1}
 
 % Title info
-\title{Testing lepton flavor universality at LHCb}
-\subtitle{
-    Partially fulfilling PhD candidacy requirement for University of Maryland}
+\title{Testing lepton flavor universality in semileptonic channels at LHCb}
 \author{Yipeng Sun}
 \date{\today}
 
 \begin{document}
 \maketitle
+
+\section{Physics}
+\subsection{Decay modes}
+
+\subsection{Theoretical restrictions on the decay modes}
+
+\subsection{Transition matrix element}
+
+\subsection{Form factors}
+
+\section{Review of previous measurements}
+\subsection{2012 Babar $R(D^{(*)})$}
+
+\subsection{2014 LHCb $R(D^{*})$}
+
 
 \end{document}
