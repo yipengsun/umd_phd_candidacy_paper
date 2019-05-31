@@ -1,7 +1,7 @@
 # Author: Yipeng Sun <syp at umd dot edu>
 #
 # Based on: https://tex.stackexchange.com/questions/40738/how-to-properly-make-a-latex-project
-# Last Change: Fri May 31, 2019 at 06:52 AM -0400
+# Last Change: Fri May 31, 2019 at 07:02 AM -0400
 
 # Set LaTeX compiler
 MAKE_TEX	:=	lualatex
@@ -33,4 +33,4 @@ clean:
 
 pack:
 	@echo "Packing all files into a zip bundle..."
-	@apack $(ZIP_FILE) ./Makefile ./README.md ./*.tex ./*.pdf ./res ./schematics
+	@apack $(ZIP_FILE) ./Makefile ./README.md ./*.tex ./*.pdf ./figs
