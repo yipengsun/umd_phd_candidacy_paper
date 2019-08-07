@@ -1,7 +1,15 @@
 \documentclass[10pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Package configuration %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Page margin
 \usepackage[margin=1in]{geometry}
+
+% Support for bold small cap font
+\usepackage[tuenc]{fontspec}%for lualatex case
+\setmainfont{CMU Serif}
 
 % Better typesetting quality
 % also used to customize section style
@@ -15,8 +23,33 @@
 \titleformat{\subsection}{\normalfont\small\bfseries\filcenter}
     {\thesubsection}{1em}{#1}
 
+% Setup link
+\usepackage{hyperref}
+\hypersetup{colorlinks,breaklinks,citecolor=blue}
+
+% Set up biblatex database
+\usepackage[
+    %style=authortitle-tcomp,
+    %firstinits=true,
+    %backref=true,
+    natbib=true,
+    backend=biber,
+    % NOTE: This options ensures that no automatic et al. is generated
+    maxbibnames=99,
+    % NOTE: This option must be enabled with 'babel' package
+    useprefix=false
+]{biblatex}
+\addbibresource{umd_phd_candidacy_paper.bib}
+
+%%%%%%%%%%%%%%%%%
+% User settings %
+%%%%%%%%%%%%%%%%%
+
+% User-defined variables
+\def\BaBar/{\textsc{BaBar}}
+
 % Title info
-\title{Testing lepton flavor universality in semileptonic channels at LHCb}
+\title{Review on Testing lepton flavor universality in semileptonic channels}
 \author{Yipeng Sun}
 \date{\today}
 
@@ -27,37 +60,62 @@
 What is LFUV? (FU physics, FUV physics)
 Why semileptonic decays (good thing about form factor)?
 A historical review, starting from 2012 BaBar;
-Talk about Phoebe's run1 analyses.
+Talk about Phoebe's run 1 analyses.
 Talk about what we are doing.
 Talk about expected improvements and drawbacks of our upcoming analysis compared
-to run1.
+to run 1.
 
-\section{Physics}
-\subsection{Decay modes}
+\section{Theory}
+\subsection{Lepton flavor universality}
 
-% \subsection{Theoretical restrictions on the decay modes}
-% Advantages and disadvantages of the decay modes listed above
+\subsection{Advantages of semileptonic channel decays}
 
-\subsection{Transition matrix element and form factors}
+\subsection{Higgs mechanism}
 
-%\subsection{Form factors}
+\subsection{2-Higgs doublet models (2HDM)}
+% type-II model claimed to be excluded; type-III (very similar to type-II) still
+% alive.
 
-\subsection{Possible explanations for LFUV}
-% Charged Higgs, 2HDM (simpler model excluded, more complicated one still alive)
-
-% Leptoquark
+\subsection{Leptoquark models}
 
 
-\section{Review of previous key measurements}
+\section{Review of colliders/detectors for $B$-physics}
+One may ask: Why are we so interested in $B$ mesons?
+% Initially B factories are meant for CP violation detection.
+Initially, B factories, such as \BaBar/, was primarily constructed to do
+precision measurements on CP violation of \cite{Luth:1994}.
+
+
+% Talk about why B-bound states/mesons are also good for testing LFUV.
+$B$ mesons provide a good testing bed for new physics:
+They have enough energy to decay into all 3 flavors of leptons;
+at the same time, they are not too heavy to produce.
+
+All measurements start from $b\bar{b}$ bound states.
+Electron-position colliders\footnote{
+    Such as PEP-II, the collider for the \BaBar/ experiment.
+} produce $\Upsilon_{4s}$ via electroweak interaction
+Hadron colliders\footnote{
+    Such as Large Hadron Collider (LHC) for the LHCb experiment.
+} produce $\Upsilon_{4s}$ via strong interaction.
+
+
+\input{include/detectors/00-babar.tex}
+\input{include/detectors/01-belle.tex}
+\input{include/detectors/02-lhcb.tex}
+
+
+\section{Review of previous measurements}
+
+\subsection{2013 \BaBar/ $R(D^{(*)})$}
+% 2015 BELLE (also hadronic tag)
 % BELLE semileptonic tags
 
-\subsection{2012 Babar $R(D^{(*)}) hadronic tag$}
-% 2015 BELLE (also hadronic tag)
-
-\subsection{2015 LHCb $R(D^{*})$}
+\subsection{2016 LHCb $R(D^{*})$}
 
 \subsection{recent measurements from LHCb (forgot the decay channels)}
 %2018 LHCb hadronic decay of Tau -> 3* Pi R(D*)
+
 
 \section{Outlook for LHCb Run 2 measurements}
 %\subsection{Current progress}
@@ -67,5 +125,6 @@ to run1.
 %\subsection{possible drawbacks}
 % Remember: Run 2 supposedly has better pile-ups.
 
-
+\vspace{5em}
+\printbibliography
 \end{document}
