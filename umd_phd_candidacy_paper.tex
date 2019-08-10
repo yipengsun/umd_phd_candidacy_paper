@@ -8,12 +8,14 @@
 \usepackage[margin=1in]{geometry}
 
 % Support for bold small cap font
-\usepackage[tuenc]{fontspec}%for lualatex case
+\usepackage[tuenc]{fontspec}
 \setmainfont{CMU Serif}
 
 % Better typesetting quality
-% also used to customize section style
 \usepackage{microtype}
+
+% SI-units
+\usepackage{siunitx}
 
 % Redefine section, subsection styles
 \usepackage[compact,center,explicit]{titlesec}
@@ -23,23 +25,40 @@
 \titleformat{\subsection}{\normalfont\small\bfseries\filcenter}
     {\thesubsection}{1em}{#1}
 
-% Setup link
+% PRL-style horizontal rule
+\usepackage{graphicx,amssymb}
+\newcommand{\PRLrule}{
+    \bigskip
+    \noindent\makebox[\linewidth]{
+        \resizebox{0.3333\linewidth}{1pt}{$\blacklozenge$}
+    }
+    \bigskip
+}
+
+% Set up link
 \usepackage{hyperref}
 \hypersetup{colorlinks,breaklinks,citecolor=blue}
 
+% Set up author affiliation
+\usepackage[affil-it]{authblk}
+
 % Set up biblatex database
 \usepackage[
-    %style=authortitle-tcomp,
-    %firstinits=true,
+    %style=phys,
+    giveninits=true,
     %backref=true,
     natbib=true,
     backend=biber,
-    % NOTE: This options ensures that no automatic et al. is generated
-    maxbibnames=99,
-    % NOTE: This option must be enabled with 'babel' package
+    doi=true,
+    % Sort by the order of citation
+    sorting=none,
+    % This options ensures that no automatic et al. is generated
+    %maxbibnames=99,
+    % This option must be enabled with 'babel' package
     useprefix=false
 ]{biblatex}
 \addbibresource{umd_phd_candidacy_paper.bib}
+
 
 %%%%%%%%%%%%%%%%%
 % User settings %
@@ -51,22 +70,30 @@
 % Title info
 \title{Review on Testing lepton flavor universality in semileptonic channels}
 \author{Yipeng Sun}
+\affil{Department of Physics, University of Maryland}
 \date{\today}
+
+
+%%%%%%%%%%%
+% Content %
+%%%%%%%%%%%
 
 \begin{document}
 \maketitle
 
-\section{Introduction}
-What is LFUV? (FU physics, FUV physics)
-Why semileptonic decays (good thing about form factor)?
-A historical review, starting from 2012 BaBar;
-Talk about Phoebe's run 1 analyses.
-Talk about what we are doing.
-Talk about expected improvements and drawbacks of our upcoming analysis compared
-to run 1.
+\begin{abstract}
+    What is LFUV? (FU physics, FUV physics)
+    Why semileptonic decays (good thing about form factor)?
+    A historical review, starting from 2012 BaBar;
+    Talk about Phoebe's run 1 analyses.
+    Talk about what we are doing.
+    Talk about expected improvements and drawbacks of our upcoming analysis compared
+    to run 1.
+\end{abstract}
 
 \section{Theory}
-\subsection{Lepton flavor universality}
+% Lepton flavor universality (LFU) and LFU violation (LFUV)
+\input{include/theories/00-lepton_flavor_universality_violation.tex}
 
 \subsection{Advantages of semileptonic channel decays}
 
@@ -79,30 +106,31 @@ to run 1.
 \subsection{Leptoquark models}
 
 
-\section{Review of colliders/detectors for $B$-physics}
-One may ask: Why are we so interested in $B$ mesons?
+\section{Review for detectors/colliders used in testing LFU}
+The LFU has been tested in many precision measurements.
+The majority of them involve the difference between the decay rates of $B$
+mesons to $\tau$ and $\mu$.
+
+% Why not J/psi (c cbar, mass ~ 3.10 GeV, mass of tau ~ 1.77 GeV)?
+One may ask: Why are we so focused on $b$ quark bound states and mesons?
+After all, $J/\psi$, a $c\bar{c}$ bound state, is already kinematically allowed
+to decay into all three generations of leptons.
+The main reason is:
 % Initially B factories are meant for CP violation detection.
-Initially, B factories, such as \BaBar/, was primarily constructed to do
-precision measurements on CP violation of \cite{Luth:1994}.
+Initially, detectors of $B$ factories, such as \BaBar/ of PEP-II, were
+primarily constructed to for precision measurements on CP violation of $B^0$,
+for SM predicts ``large, calculable'' CP violation in the decay of these mesons
+\cite{Luth:1994}.
+But these detectors proved to be advantageous in the testing of LFU, which is
+often part of their secondary goals \cite{Luth:1994}.
 
-
-% Talk about why B-bound states/mesons are also good for testing LFUV.
-$B$ mesons provide a good testing bed for new physics:
-They have enough energy to decay into all 3 flavors of leptons;
-at the same time, they are not too heavy to produce.
-
-All measurements start from $b\bar{b}$ bound states.
-Electron-position colliders\footnote{
-    Such as PEP-II, the collider for the \BaBar/ experiment.
-} produce $\Upsilon_{4s}$ via electroweak interaction
-Hadron colliders\footnote{
-    Such as Large Hadron Collider (LHC) for the LHCb experiment.
-} produce $\Upsilon_{4s}$ via strong interaction.
-
+In this section, I will review \BaBar/ detector of the PEP-II collider, and LHCb
+of LHC---both have conducted various tests on LFU.
+These detectors/colliders are representative of the detectors for
+electron-position colliders and hadron colliders.
 
 \input{include/detectors/00-babar.tex}
-\input{include/detectors/01-belle.tex}
-\input{include/detectors/02-lhcb.tex}
+\input{include/detectors/01-lhcb.tex}
 
 
 \section{Review of previous measurements}
@@ -117,7 +145,7 @@ Hadron colliders\footnote{
 %2018 LHCb hadronic decay of Tau -> 3* Pi R(D*)
 
 
-\section{Outlook for LHCb Run 2 measurements}
+\section{Outlook for LHCb Run 2 $R(D^{(*)})$ measurements}
 %\subsection{Current progress}
 
 %\subsection{Expected improvements}
@@ -125,6 +153,6 @@ Hadron colliders\footnote{
 %\subsection{possible drawbacks}
 % Remember: Run 2 supposedly has better pile-ups.
 
-\vspace{5em}
+\PRLrule
 \printbibliography
 \end{document}
