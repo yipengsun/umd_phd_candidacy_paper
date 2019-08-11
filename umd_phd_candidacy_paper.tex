@@ -9,7 +9,13 @@
 
 % Support for bold small cap font
 \usepackage[tuenc]{fontspec}
-\setmainfont{CMU Serif}
+\setmainfont[
+    Path=./fonts/,
+    Extension=.otf,
+    BoldFont=cmu-serif-bold,
+    BoldItalicFont=cmu-serif-bold-italic,
+    ItalicFont=cmu-serif-italic,
+]{cmu-serif}
 
 % Better typesetting quality
 \usepackage{microtype}
