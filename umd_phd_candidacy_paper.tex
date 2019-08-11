@@ -30,7 +30,7 @@
 \usepackage[compact,center,explicit]{titlesec}
 \usepackage{textcase}
 \titleformat{\section}{\scshape\lsstyle\normalsize\filcenter}
-    {\thesection}{1em}{\textls{\MakeTextUppercase{#1}}}
+    {\thesection}{1em}{\MakeTextUppercase{#1}}
 \titleformat{\subsection}{\normalfont\small\bfseries\filcenter}
     {\thesubsection}{1em}{#1}
 
@@ -43,6 +43,11 @@
     }
     \bigskip
 }
+
+% Bold math in section title
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
 
 % Set up link
 \usepackage{hyperref}
