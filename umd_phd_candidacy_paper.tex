@@ -20,6 +20,14 @@
 % Better typesetting quality
 \usepackage{microtype}
 
+% Make letter spacing work for both XeLaTeX and LuaLaTeX
+\usepackage{ifluatex}
+\ifluatex
+    \newcommand{\LSSTYLE}{\lsstyle}
+\else
+    \newcommand{\LSSTYLE}{\addfontfeatures{LetterSpace=20}}
+\fi
+
 % Math
 \usepackage{amsmath}
 
@@ -29,9 +37,9 @@
 % Redefine section, subsection styles
 \usepackage[compact,center,explicit]{titlesec}
 \usepackage{textcase}
-\titleformat{\section}{\scshape\lsstyle\normalsize\filcenter}
+\titleformat{\section}{\LSSTYLE\normalsize\scshape\filcenter}
     {\thesection}{1em}{\MakeTextUppercase{#1}}
-\titleformat{\subsection}{\normalfont\small\bfseries\filcenter}
+\titleformat{\subsection}{\small\bfseries\filcenter}
     {\thesubsection}{1em}{#1}
 
 % PRL-style horizontal rule
