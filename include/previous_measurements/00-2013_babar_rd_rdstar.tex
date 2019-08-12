@@ -1,0 +1,64 @@
+\subsection{2013 \BaBar/ \RDDst/}
+This paper \cite{Lees:2013uzd} is the first measurement that observers an excess
+in the \RD/ and \RDst/ ratio:
+There is a $2.0 \sigma$ and $2.7 \sigma$ deviation from the SM, for \RD/ and
+\RDst/ respectively, and a combined $3.4 \sigma$ deviation.
+I will review some of the techniques applied in this analysis.
+
+The signature of a semileptonic $B$ decay into $\tau$, such as
+$B^0 \longrightarrow D^{-(*)} (\longrightarrow \text{various modes})
+\tau^+ (\longrightarrow \mu^+ \nu_{\mu} \bar{\nu}_{\tau}) \nu_{\tau}$, is the
+non-zero missing mass:
+Since $\tau$ has a very short lifetime, it decays into a $\mu$ and two
+neutrinos;
+this results in a 3-neutrino final state.
+Now, the missing mass $m_{miss}$ is defined to be:
+\begin{equation*}
+    m_{miss} \equiv \left(p_{B_{sig}} - p_{visible}\right)^2
+\end{equation*}
+if there is only one neutrino, then $m_{miss} = m_{\nu} \approx 0$;
+on the other hand, three neutrinos very frequently gives non-zero $m_{miss}$.
+
+Hence, it is crucial to find $p_{B_{sig}}$.
+In a $e^- e^+$, collider, the invariant mass is known.
+As long as we find the momentum of the other $B$ meson, denoted as
+$p_{B_{tag}}$, we know $p_{B_{sig}}$;
+that is, we tag the decay of the \Y4S/:
+\begin{equation*}
+    \Y4S/ \longrightarrow B \overline{B} \xrightarrow{\text{tagging}}
+        B_{tag} B_{sig}
+\end{equation*}
+
+\BaBar/ and BELLE independently developed two types of tagging algorithms:
+semileptonic tagging and hadronic tagging.
+Semileptonic tagging finds $B_{tag}$ with the following decay:
+$B^+ \longrightarrow l^+ \nu_l$, where $l+$ is $e^+ or \mu^+$.
+This has the advantage of a larger branching ratio, thus more ($\approx 1\%$)
+\Y4S/ events are tagged.
+However, in this type of events, at least two neutrinos are presents, which
+makes the reconstruction of $p_{B_{sig}}$ less precise \cite{Ciezarek:2017yzh}.
+
+In this paper, hadronic tagging algorithm is improved and used:
+It listed a very large number of hadronic decay chains of $B$;
+for each \Y4S/ event, it compares the decay product of each $B$, tagging the
+ones that match one of the listed modes.
+This has a smaller tagging rate ($\approx 0.3$), but because the tagging side
+momentum is reconstructed precisely (no neutrino, so all hadronic particles are
+in principle reconstructed), the estimation on $p_{B_{sig}}$ is better, which
+leads to a more precise measurement on
+$m_{miss}$ \cite{Lees:2013uzd,Ciezarek:2017yzh}.
+
+Another interesting technique is the usage of Gaussian non-parametric kernel
+estimators in the fit.
+This method has the added benefit of knowing the exact relation between variance
+and bias, making optimization easier.
+After numerous validation processes, it is concluded that the kernel estimators
+performed well \cite{Lees:2013uzd}.
+
+% BELLE measurements
+BELLE experiment at KEK measured semileptonic $B$ decays with $\tau$ decay both
+leptonically and hadronically.
+Both semileptonic and hadronic tagging were used for the leptonic $\tau$ decay;
+for hadronic $\tau$ decay, only hadronic tag was used.
+The overall \RDDst/ deviation from the SM is about
+$2\sigma$ \cite{Hirose:2017185}.

@@ -93,6 +93,9 @@
 % User-defined variables
 \def\BaBar/{\textsc{BaBar}}
 \def\Y4S/{\ensuremath{\Upsilon(\text{4S})}}
+\def\RD/{\ensuremath{\mathcal{R}(D)}}
+\def\RDst/{\ensuremath{\mathcal{R}(D^{*})}}
+\def\RDDst/{\ensuremath{\mathcal{R}(D^{(*)})}}
 
 % Title info
 \title{Review on Testing lepton flavor universality in semileptonic channels}
@@ -163,25 +166,39 @@ electron-position colliders and hadron colliders.
 \input{include/detectors/01-lhcb.tex}
 
 
-\section{Review of previous measurements}
+\section{Review of previous measurements of \RDDst/}
+In this section, I will review some of the more important results of LFU
+measurements.
+I will focus on \BaBar/ and LHCb results, but related measurement results from
+other experiments, such as BELLE, will also be listed.
 
-\subsection{2013 \BaBar/ $R(D^{(*)})$}
-% 2015 BELLE (also hadronic tag)
-% BELLE semileptonic tags
+Before we proceed, let us define the meaning of \RDDst/:
+\begin{equation*}
+    \RDDst/ \equiv \frac{
+        \mathcal{B}\left(
+        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \tau^{\pm}
+            \left(\nu_{\tau}/\bar{\nu}_{\tau}\right)\right)
+        }{
+        \mathcal{B}\left(
+        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \mu^{\pm}
+            \left(\nu_{\mu}/\bar{\nu}_{\mu}\right)\right)
+        }
+\end{equation*}
+where $\mathcal{B}$ denotes branching fraction.
+
+\input{include/previous_measurements/00-2013_babar_rd_rdstar.tex}
 
 \subsection{2016 LHCb $R(D^{*})$}
 
-\subsection{recent measurements from LHCb (forgot the decay channels)}
-%2018 LHCb hadronic decay of Tau -> 3* Pi R(D*)
+% 2018 LHCb hadronic decay of Tau -> 3* Pi R(D*)
 
 
-\section{Outlook for LHCb Run 2 $R(D^{(*)})$ measurements}
-%\subsection{Current progress}
-
-%\subsection{Expected improvements}
-
-%\subsection{possible drawbacks}
+\section{Outlook for LHCb Run 2 \RDDst/ measurements}
+% Expected improvements
 % Remember: Run 2 supposedly has better pile-ups.
+
+% Current progress
+
 
 \PRLrule
 \printbibliography
