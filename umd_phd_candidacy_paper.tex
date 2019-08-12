@@ -34,6 +34,9 @@
 % SI units
 \usepackage{siunitx}
 
+% Figure
+\usepackage{float,graphicx}
+
 % Redefine section, subsection styles
 \usepackage[compact,center,explicit]{titlesec}
 \usepackage{textcase}
@@ -43,7 +46,7 @@
     {\thesubsection}{1em}{#1}
 
 % PRL-style horizontal rule
-\usepackage{graphicx,amssymb}
+\usepackage{amssymb}
 \newcommand{\PRLrule}{
     \bigskip
     \noindent\makebox[\linewidth]{
@@ -57,12 +60,13 @@
 \g@addto@macro\bfseries{\boldmath}
 \makeatother
 
+% Set up author affiliation
+\usepackage[affil-it]{authblk}
+
 % Set up link, with (hopefully) math symbol support
 \usepackage[pdfencoding=auto,psdextra]{hyperref}
 \hypersetup{colorlinks,breaklinks,citecolor=blue}
-
-% Set up author affiliation
-\usepackage[affil-it]{authblk}
+\usepackage{cleveref}
 
 % Set up biblatex database
 \usepackage[
@@ -156,7 +160,7 @@ These detectors/colliders are representative of the detectors for
 electron-position colliders and hadron colliders.
 
 \input{include/detectors/00-babar.tex}
-%\input{include/detectors/01-lhcb.tex}
+\input{include/detectors/01-lhcb.tex}
 
 
 \section{Review of previous measurements}
