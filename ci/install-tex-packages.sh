@@ -57,8 +57,9 @@ tlmgr install footnotehyper \
 
 # Install other packages needed for this document
 tlmgr install latexmk \
-              tuenc \
               siunitx \
+              titlesec \
+              cleveref \
               preprint \
               || exit 1
 
