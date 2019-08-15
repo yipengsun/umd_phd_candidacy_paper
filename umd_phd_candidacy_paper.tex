@@ -99,7 +99,7 @@
 \def\RDDst/{\ensuremath{\mathcal{R}(D^{(*)})}}
 
 % Title info
-\title{Review on Testing lepton flavor universality in semileptonic channels}
+\title{Review on testing lepton flavor universality in semileptonic channels}
 \author{Yipeng Sun}
 \affil{Department of Physics, University of Maryland}
 \date{\today}
@@ -122,7 +122,38 @@
     to run 1.
 \end{abstract}
 
+
+\section{Introduction}
+The LFU has been tested in many precision measurements.
+The majority of them involve the difference between the decay rates of $B$
+mesons to $\tau$ and $\mu$.
+% Why not J/psi (c cbar, mass ~ 3.10 GeV, mass of tau ~ 1.77 GeV)?
+
+Before we proceed, let us define the meaning of \RDDst/:
+\begin{equation*}
+    \RDDst/ \equiv \frac{
+        \mathcal{B}\left(
+        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \tau^{\pm}
+            \left(\nu_{\tau}/\bar{\nu}_{\tau}\right)\right)
+        }{
+        \mathcal{B}\left(
+        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \mu^{\pm}
+            \left(\nu_{\mu}/\bar{\nu}_{\mu}\right)\right)
+        }
+\end{equation*}
+where $\mathcal{B}$ denotes branching fraction.
+
+
 \section{Theory}
+To gain knowledge about LFU, it is necessary to talk about unbroken eletroweak
+Lagrangian.
+To understand the advantages of testing in semileptonic channel, a bit of form
+factor is needed (actually ff is perturbative QCD, pdf is DIS, is non-pert).
+There is possible LFUV.
+One possible explanation for LFUV is 2-Higgs doublet, but it is needed to
+understand a bit on the Higgs mechanism.
+Another explanation covered in this review is Leptoquark, which will be provide
+at the end of the section
 
 \input{include/theories/00-lepton_flavor_universality.tex}
 
@@ -138,14 +169,6 @@
 
 
 \section{Review for detectors/colliders used in testing LFU}
-The LFU has been tested in many precision measurements.
-The majority of them involve the difference between the decay rates of $B$
-mesons to $\tau$ and $\mu$.
-
-% Why not J/psi (c cbar, mass ~ 3.10 GeV, mass of tau ~ 1.77 GeV)?
-One may ask: Why are we so focused on $b$ quark bound states and mesons?
-After all, $J/\psi$, a $c\bar{c}$ bound state, is already kinematically allowed
-to decay into all three generations of leptons.
 The main reason is:
 % Initially B factories are meant for CP violation detection.
 Initially, detectors of $B$ factories, such as \BaBar/ at PEP-II, were
@@ -172,20 +195,6 @@ In this section, I will review some of the more important results of LFU
 measurements.
 I will focus on \BaBar/ and LHCb results, but related measurement results from
 other experiments, such as BELLE, will also be listed.
-
-Before we proceed, let us define the meaning of \RDDst/:
-\begin{equation*}
-    \RDDst/ \equiv \frac{
-        \mathcal{B}\left(
-        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \tau^{\pm}
-            \left(\nu_{\tau}/\bar{\nu}_{\tau}\right)\right)
-        }{
-        \mathcal{B}\left(
-        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \mu^{\pm}
-            \left(\nu_{\mu}/\bar{\nu}_{\mu}\right)\right)
-        }
-\end{equation*}
-where $\mathcal{B}$ denotes branching fraction.
 
 \input{include/previous_measurements/00-2013_babar_rd_rdstar.tex}
 \input{include/previous_measurements/01-2015_lhcb_rdstar.tex}
