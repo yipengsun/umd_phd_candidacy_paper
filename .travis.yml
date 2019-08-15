@@ -5,6 +5,10 @@ services: docker
 notifications:
     email: false
 
+branches:
+    only:
+        master
+
 script:
     - |
       docker run \
