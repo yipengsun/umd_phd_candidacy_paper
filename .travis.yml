@@ -17,6 +17,7 @@ deploy:
     api_key:
         secure: cxVV6OABqaekvfdr0UemnVj5wZUGUBrEIEgg4DHFqzpNjWkeRMObIKOPn2TyTjI0gTlAdsZKmUS9xyOkMTeCj9U6OAnoSnwjldiPAstmpCb0U4GqMmFgm9r1orcmrDSTBxDwraMSVvO3YFMlPjNP/yRc2VLcTRJy0JjPc5crR9vEyb7maeZ1TZaC7D/AzrKjAxPJ5lYF3W/snXdBusfRZfj7cAbRqklY2zuIs0AxqYtkU1hNayINUoaL+KHMZBnZs6A+nPWyOa9iEYSdB0DzNBOUEK1tymlSeCIe8ChSLpbsxU6A7VRw0hvdrh/KgoZrJPr9SvjPKoIdCCm+OqMFLldvZ+weLS6eHwiRz3etRbrAd1WwMIbSr8kM38Ou+bu0Be0LgouxN36FYhmJMeSieaegRCv2+nAoS2RNwRgrNiP8kooHQKKZJ2xJhIHTSPiaew7Z2kjxELTXE39tod8EdLmQlXrWPAHPNmdxa6iTLsVi39rkGEOjxc2igF0pLbgn7/xUa+GZfFK/oyl+x1vgUEqYFozkuCo0+hSnQgHlQnWE6UFua2mEqE15tjb0FUuffYhF22K2RJ1lTcYJdySbqCW+HLINZGesgQyQmOQdPYQIpKrG98CpVYV4PVESnPr0m96/q7ojlsXfCN/LYY9rHfPwak8/9ddyc0/9RQtgizA=
     file: build/umd_phd_candidacy_paper.pdf
+    skip_cleanup: true
     on:
         tags: true
         repo: yipengsun/umd_phd_candidacy_paper
