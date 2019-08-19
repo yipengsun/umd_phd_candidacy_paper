@@ -124,37 +124,63 @@
 
 
 \section{Introduction}
-The LFU has been tested in many precision measurements.
-The majority of them involve the difference between the decay rates of $B$
-mesons to $\tau$ and $\mu$.
-% Why not J/psi (c cbar, mass ~ 3.10 GeV, mass of tau ~ 1.77 GeV)?
+The Standard Model (SM) has been very successful in describing the interactions
+between elementary particles, such as quarks and leptons.
+The theory has been tested experimentally to high precision.
+However, there are phenomena that cannot be explained by the SM, such as
+matter-antimatter asymmetry, hinting for some New Physics (NP) beyond the SM.
+One way to search for NP is to measuring the decay rates of certain processes
+very precisely;
+rates that differ from the SM predictions may provide constraints on NP.
 
-Before we proceed, let us define the meaning of \RDDst/:
+Though experimental discovery, it has been established that leptons have three
+flavors:
+Charged leptons, namely electron $e$, muon $\mu$, and tauon $\tau$;
+their corresponding charge-neutral neutrinos: $\nu_e$, $\nu_\mu$ and $\nu_\tau$.
+SM mandates that all three flavors of lepton participate in eletroweak
+interaction with the same strength, except for the Higgs mechanism through which
+they acquire their mass.
+This is known as lepton flavor universality (LFU).
+
+The LFU has been tested in many precision measurements, such as the decay rate
+of $K^- \rightarrow e^- \nu_e$ versus $K^- \rightarrow \mu^- \nu_\mu$\footnote{
+    Unless specified, charge conjugation is assumed.
+}.
+So far, no definite violation has been detected.
+In this paper, we focus on the semileptonic decay channels of $B$ mesons, such
+as $B^- \rightarrow D^{(*)} \l^- \overline{\nu}_l$:
+Currently, the world average of the combined decay rate ratios $\RD/$ and
+$\RDst/$, defined as\footnote{
+    $\mathcal{B}$ denotes branching fraction.
+}:
 \begin{equation*}
     \RDDst/ \equiv \frac{
         \mathcal{B}\left(
-        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \tau^{\pm}
-            \left(\nu_{\tau}/\bar{\nu}_{\tau}\right)\right)
-        }{
+            B^{0,-} \rightarrow D^{+,0(*)} \tau^- \overline{\nu}_\tau
+        \right)
+    }{
         \mathcal{B}\left(
-        B^{(0,\bar{0}),\pm} \longrightarrow D^{(\bar{0},0),\mp(*)} \mu^{\pm}
-            \left(\nu_{\mu}/\bar{\nu}_{\mu}\right)\right)
-        }
+            B^{0,-} \rightarrow D^{+,0(*)} \mu^- \overline{\nu}_\mu
+        \right)
+    }
 \end{equation*}
-where $\mathcal{B}$ denotes branching fraction.
+has a $3.08\sigma$ deviation from the SM prediction, pointing to a possible
+lepton flavor universality violation (LFUV);
+many collaborations are working on more precise measurements to provide a
+definite answer.
+
+In the rest of the paper, we begin with a theoretical review on
+why SM manifests LFU; possible extensions to SM, such as 2-Higgs doublet model
+(2HDM), to permit LFUV; and advantages of using semileptonic channels for this
+type of measurements.
+We then review and compare colliders, such as $e^- e^+$ and hadron collider, and
+detectors used in the testing of LFU.
+After that, we will review previous experimental results.
+Finally, we provide an overlook on updating $\RDDst/$ measurement with LHCb Run
+2 data.
 
 
 \section{Theory}
-To gain knowledge about LFU, it is necessary to talk about unbroken eletroweak
-Lagrangian.
-To understand the advantages of testing in semileptonic channel, a bit of form
-factor is needed (actually ff is perturbative QCD, pdf is DIS, is non-pert).
-There is possible LFUV.
-One possible explanation for LFUV is 2-Higgs doublet, but it is needed to
-understand a bit on the Higgs mechanism.
-Another explanation covered in this review is Leptoquark, which will be provide
-at the end of the section
-
 \input{include/theories/00-lepton_flavor_universality.tex}
 
 \subsection{Advantages of semileptonic channel decays}
@@ -196,11 +222,11 @@ measurements.
 I will focus on \BaBar/ and LHCb results, but related measurement results from
 other experiments, such as BELLE, will also be listed.
 
+
 \input{include/previous_measurements/00-2013_babar_rd_rdstar.tex}
 \input{include/previous_measurements/01-2015_lhcb_rdstar.tex}
 
 % 2018 LHCb hadronic decay of Tau -> 3* Pi R(D*)
-
 
 \section{Outlook for LHCb Run 2 \RDDst/ measurements}
 % Expected improvements
