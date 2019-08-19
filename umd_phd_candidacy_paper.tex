@@ -37,6 +37,10 @@
 % Figure
 \usepackage{float,graphicx}
 
+% Feynman slash notation
+\usepackage{centernot}
+\newcommand{\fsl}[1]{{\centernot{#1}}}
+
 % Redefine section, subsection styles
 \usepackage[compact,center,explicit]{titlesec}
 \usepackage{textcase}
@@ -142,10 +146,10 @@ of $K^- \rightarrow e^- \nu_e$ versus $K^- \rightarrow \mu^- \nu_\mu$\footnote{
     Unless specified, charge conjugation is assumed.
 }.
 So far, no definite violation has been detected.
-In this paper, we focus on the semileptonic decay channels of $B$ mesons, such
-as $B^- \rightarrow D^{(*)} \l^- \overline{\nu}_l$:
-Currently, the world average of the combined decay rate ratios $\RD/$ and
-$\RDst/$, defined as\footnote{
+In this paper, we focus on the semileptonic decays of $B$ mesons, such as
+$B^- \rightarrow D^{(*)} \l^- \overline{\nu}_l$:
+Currently, the world average of the combined decay rate ratio $\RDDst/$,
+defined as\footnote{
     $\mathcal{B}$ denotes branching fraction.
 }:
 \begin{equation*}
@@ -159,15 +163,15 @@ $\RDst/$, defined as\footnote{
         \right)
     }
 \end{equation*}
-has a $3.08\sigma$ deviation from the SM prediction, pointing to a possible
-lepton flavor universality violation (LFUV);
+has a $3.08\sigma$ deviation from the SM prediction \cite{HFLAV:2019}, pointing
+to a possible lepton flavor universality violation (LFUV);
 many collaborations are working on more precise measurements to provide a
 definite answer.
 
 In the rest of the paper, we begin with a theoretical review on
-why SM manifests LFU; possible extensions to SM, such as 2-Higgs doublet model
-(2HDM), to permit LFUV; and advantages of using semileptonic channels for this
-type of measurements.
+why SM manifests LFU;
+extensions to SM, such as 2-Higgs doublet model (2HDM), to permit LFUV;
+and advantages of using semileptonic channels for this type of measurements.
 We then review and compare colliders, such as $e^- e^+$ and hadron collider, and
 detectors used in the testing of LFU.
 After that, we will review previous experimental results.
@@ -178,15 +182,13 @@ Finally, we provide an overlook on updating $\RDDst/$ measurement with LHCb Run
 \subsection{Lepton flavor universality}
 \input{include/theories/00-lepton_flavor_universality.tex}
 
-\subsection{Higgs mechanism}
-
-\subsection{Advantages of semileptonic channel decays}
-
-\subsection{2-Higgs doublet models (2HDM)}
+\subsection{2HDM}
 % type-II model claimed to be excluded; type-III (very similar to type-II) still
 % alive.
 
 \subsection{Leptoquark models}
+
+\subsection{Advantages of semileptonic channel decays}
 
 \section{Review of colliders/detectors used in testing LFU}
 The main reason is:
