@@ -29,7 +29,9 @@
 
 % Math
 \usepackage{amsmath}
-\renewcommand{\vec}[1]{\mathbf{#1}}  % Bold as vector
+\renewcommand{\vec}[1]{\mathbf{#1}}                   % Bold as vector
+\newcommand{\spin}[1]{#1}                             % spinor doing nothing
+\newcommand{\Lden}[1]{\ensuremath{\mathcal{L}_{#1}}}  % Lagrangian density
 
 % SI units
 \usepackage{siunitx}
@@ -39,7 +41,7 @@
 
 % Feynman slash notation
 \usepackage{centernot}
-\newcommand{\fsl}[1]{{\centernot{#1}}}
+\newcommand{\fsl}[1]{\ensuremath{\centernot{#1}}}
 
 % Redefine section, subsection styles
 \usepackage[compact,center,explicit]{titlesec}
@@ -143,11 +145,11 @@ This is known as lepton flavor universality (LFU).
 
 The LFU has been tested in many precision measurements, such as the decay rate
 of $K^- \rightarrow e^- \nu_e$ versus $K^- \rightarrow \mu^- \nu_\mu$\footnote{
-    Unless specified, charge conjugation is assumed.
+    Unless specified, charge conjugation is assumed throughout the paper.
 }.
 So far, no definite violation has been detected.
 In this paper, we focus on the semileptonic decays of $B$ mesons, such as
-$B^- \rightarrow D^{(*)} \l^- \overline{\nu}_l$:
+$B^- \rightarrow D^{(*)} l^- \overline{\nu}_l$:
 Currently, the world average of the combined decay rate ratio $\RDDst/$,
 defined as\footnote{
     $\mathcal{B}$ denotes branching fraction.
@@ -172,8 +174,8 @@ In the rest of the paper, we begin with a theoretical review on
 why SM manifests LFU;
 extensions to SM, such as 2-Higgs doublet model (2HDM), to permit LFUV;
 and advantages of using semileptonic channels for this type of measurements.
-We then review and compare colliders, such as $e^- e^+$ and hadron collider, and
-detectors used in the testing of LFU.
+We then review and compare colliders and detectors, such as \BaBar/ at PEP-II
+and LHCb at the Large Hadron Collider (LHC), used in the testing of LFU.
 After that, we will review previous experimental results.
 Finally, we provide an overlook on updating $\RDDst/$ measurement with LHCb Run
 2 data.
@@ -182,7 +184,7 @@ Finally, we provide an overlook on updating $\RDDst/$ measurement with LHCb Run
 \subsection{Lepton flavor universality}
 \input{include/theories/00-lepton_flavor_universality.tex}
 
-\subsection{2HDM}
+\subsection{2-Higgs doublet models}
 % type-II model claimed to be excluded; type-III (very similar to type-II) still
 % alive.
 
@@ -202,11 +204,6 @@ These measurements have very similar requirements on the
 detector \cite{Boutigny:1995ib}.
 Thus, testing of LFU is often part of the secondary goals of these
 experiments \cite{Luth:1994}.
-
-In this section, I will review \BaBar/ detector at the PEP-II collider, and LHCb
-at the Large Hadron Collider (LHC)---both have conducted various tests on LFU.
-These detectors/colliders are representative of the detectors for
-electron-position colliders and hadron colliders.
 
 \input{include/detectors/00-babar.tex}
 \input{include/detectors/01-lhcb.tex}
