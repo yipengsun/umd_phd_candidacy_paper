@@ -1,8 +1,7 @@
 \documentclass[12pt,letterpaper]{article}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% Package configuration %
-%%%%%%%%%%%%%%%%%%%%%%%%%
+%{{{ Package configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Page margin
 \usepackage[margin=1in]{geometry}
@@ -69,7 +68,7 @@
 \hypersetup{colorlinks,breaklinks,citecolor=blue}
 \usepackage{cleveref}
 
-% Set up biblatex database
+% Set up bibliography
 \usepackage[
     %style=phys,
     giveninits=true,
@@ -86,10 +85,10 @@
 ]{biblatex}
 \addbibresource{umd_phd_candidacy_paper.bib}
 
+%}}}
 
-%%%%%%%%%%%%%%%%%
-% User settings %
-%%%%%%%%%%%%%%%%%
+%{{{ User settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % User-defined variables
 \def\BaBar/{\textsc{BaBar}}
@@ -104,10 +103,7 @@
 \affil{Department of Physics, University of Maryland}
 \date{\today}
 
-
-%%%%%%%%%%%
-% Content %
-%%%%%%%%%%%
+%}}}
 
 \begin{document}
 \maketitle
@@ -121,7 +117,6 @@
     Talk about expected improvements and drawbacks of our upcoming analysis compared
     to run 1.
 \end{abstract}
-
 
 \section{Introduction}
 The Standard Model (SM) has been very successful in describing the interactions
@@ -179,20 +174,19 @@ After that, we will review previous experimental results.
 Finally, we provide an overlook on updating $\RDDst/$ measurement with LHCb Run
 2 data.
 
-
 \section{Theory}
+\subsection{Lepton flavor universality}
 \input{include/theories/00-lepton_flavor_universality.tex}
 
-\subsection{Advantages of semileptonic channel decays}
-
 \subsection{Higgs mechanism}
+
+\subsection{Advantages of semileptonic channel decays}
 
 \subsection{2-Higgs doublet models (2HDM)}
 % type-II model claimed to be excluded; type-III (very similar to type-II) still
 % alive.
 
 \subsection{Leptoquark models}
-
 
 \section{Review of colliders/detectors used in testing LFU}
 The main reason is:
@@ -215,13 +209,11 @@ electron-position colliders and hadron colliders.
 \input{include/detectors/00-babar.tex}
 \input{include/detectors/01-lhcb.tex}
 
-
 \section{Review of previous measurements of \RDDst/}
 In this section, I will review some of the more important results of LFU
 measurements.
 I will focus on \BaBar/ and LHCb results, but related measurement results from
 other experiments, such as BELLE, will also be listed.
-
 
 \input{include/previous_measurements/00-2013_babar_rd_rdstar.tex}
 \input{include/previous_measurements/01-2015_lhcb_rdstar.tex}
@@ -233,7 +225,6 @@ other experiments, such as BELLE, will also be listed.
 % Remember: Run 2 supposedly has better pile-ups.
 
 % Current progress
-
 
 \PRLrule
 \printbibliography
