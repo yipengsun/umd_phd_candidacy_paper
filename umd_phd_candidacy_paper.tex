@@ -154,7 +154,7 @@ Currently, the world average of the combined decay rate ratio $\RDDst/$,
 defined as\footnote{
     $\mathcal{B}$ denotes branching fraction.
 }:
-\begin{equation*}
+\begin{equation}
     \RDDst/ \equiv \frac{
         \mathcal{B}\left(
             B^{0,-} \rightarrow D^{+,0(*)} \tau^- \overline{\nu}_\tau
@@ -164,7 +164,7 @@ defined as\footnote{
             B^{0,-} \rightarrow D^{+,0(*)} \mu^- \overline{\nu}_\mu
         \right)
     }
-\end{equation*}
+\end{equation}
 has a $3.08\sigma$ deviation from the SM prediction \cite{HFLAV:2019}, pointing
 to a possible lepton flavor universality violation (LFUV);
 many collaborations are working on more precise measurements to provide a
@@ -193,27 +193,139 @@ Finally, we provide an overlook on updating $\RDDst/$ measurement with LHCb Run
 \subsection{Advantages of semileptonic channel decays}
 
 \section{Review of colliders/detectors used in testing LFU}
-\subsection{\BaBar/ at PEP-II}
+\subsection{\BaBar/ at PEP-II} \label{sec:babar}
 \input{include/detectors/00-babar.tex}
 
-\subsection{LHCb at the LHC}
+\subsection{LHCb at the LHC} \label{sec:lhcb}
 \input{include/detectors/01-lhcb.tex}
 
 \section{Review of previous measurements of \RDDst/}
-In this section, I will review some of the more important results of LFU
-measurements.
-I will focus on \BaBar/ and LHCb results, but related measurement results from
-other experiments, such as BELLE, will also be listed.
+In 2013, \BaBar/ reported a $3.4\sigma$ discrepancy in \RDDst/ from the
+theoretical predictions \cite{Lees:2013rw}.
+Since then, follow up measurements on the same semileptonic channel have been
+performed by \BaBar/, BELLE, and LHCb, reporting various degrees of
+discrepancies.
+Currently, the world average of the measured \RDDst/ has a deviation of
+$3.08\sigma$ with respect to SM prediction \cite{HFLAV:2019}, as shown
+in \autoref{fig:rdrds_spring2019}.
 
-\input{include/previous_measurements/00-2013_babar_rd_rdstar.tex}
-\input{include/previous_measurements/01-2015_lhcb_rdstar.tex}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/rdrds_spring2019.pdf}
+    \caption{
+        World average of measured \RD/ and \RDst/, and SM predictions, as of
+        spring 2019.
+    }
+    \label{fig:rdrds_spring2019}
+\end{figure}
 
-% 2018 LHCb hadronic decay of Tau -> 3* Pi R(D*)
+% B-factory measurements
+As mentioned in \autoref{sec:babar}, $B$ factories, such as \BaBar/ and BELLE,
+know the momenta of the $B \overline{B}$ system exactly.
+By tagging and reconstructing the other $B$, known as $B_{tag}$, the momentum of
+the signal $B_{sig}$, which decays semileptonically, can be inferred.
+
+\BaBar/ and BELLE independently developed two types of tagging algorithms:
+semileptonic tagging and hadronic tagging.
+Semileptonic tagging finds $B_{tag}$ with the following decay:
+$B^- \rightarrow l^- \bar{\nu}_l$, where $l$ is a $e$ or $\mu^$.
+This has the advantage of a larger branching ratio, thus more ($\approx 1\%$)
+\Y4S/ events are tagged.
+However, in this type of events, at least two neutrinos are presents, which
+makes the reconstruction of $p_{B_{sig}}$ less precise \cite{Ciezarek:2017yzh}.
+
+On the other hand, hadronic tagging searches over a very large number of
+hadronic decay chains of $B$ for each \Y4S/ event, tagging the ones that match
+one of the known modes.
+This has a smaller tagging rate ($\approx 0.3$), but because $B_{tag}$ decays
+hadronically, no neutrino is present in the final product.
+This makes the reconstructed momentum of $B_{sig}$ very
+precise \cite{Lees:2013uzd,Ciezarek:2017yzh}.
+
+$B$ factory analyses also choose a particular decay mode of $\tau$:
+$\tau^- \rightarrow l^- \nu_\tau \bar{\nu}_l$.
+Thus the signal mode will have three neutrinos in the final product,
+whereas the normalization mode only one.
+By looking at the missing mass of the $B_{sig}$, defined as:
+\begin{equation}
+    m^2_{miss} \equiv \left(p_{B_{sig}} - p_{visible}\right)^2
+\end{equation}
+The signal, which has a non-zero $m^2_{miss}$, can be readily differentiated
+from the normalization, which does have a $m^2_{miss} \approx 0$.
+
+Non-$B \overline{B}$ background and misreconstructed events are suppressed by
+requiring a tag, together with the requirement of having a $D^{(*)}$ meson and a
+charged lepton on $B_{sig}$ \cite{Ciezarek:2017yzh}.
+
+The main background remaining is semileptonic $B$ decays to $D^{**}$, which has
+similar $m^2_{miss}$ distribution to the signal.
+They can be differentiated from the signal by looking at the distribution of
+$E^{*}_l$, the energy of the charged lepton in the $B$ rest
+frame, because the background distribution extends to higher
+energy \cite{Ciezarek:2017yzh}.
+
+The 2013 \BaBar/ result used a Gaussian non-parametric kernel estimator in the
+fitting process, because it allows for straightforward treading between variance
+and bias \cite{Lees:2013uzd}, resulting in a better fit result.
+
+% BELLE measurements
+Other than the \BaBar/ result mentioned at the beginning of this section,
+BELLE measured semileptonic $B$ decays with $\tau$ decays both
+leptonically and hadronically.
+Both semileptonic and hadronic tagging were used for the leptonic $\tau$ decay;
+for hadronic $\tau$ decay, only hadronic tag was used.
+The overall \RDDst/ deviation from the SM is about
+$2\sigma$ \cite{Hirose:2017185}.
+
+However, $B$ factories are limited by their data sample size, as discussed
+in \autoref{sec:lhcb}.
+This is the main advantage of LHCb.
+
+% 2015 LHCb leptonic tau decay
+The 2015 LHCb \RDst/ result, the first \RDst/ measurement at a hadron collider,
+is $2.1\sigma$ larger than SM prediction \cite{LHCb:PhysRevLett.115.111803}.
+This analysis is heavily inspired by the preview $B$ factory measurements, with
+a few caveats:
+The $B \overline{B}$ rest frame is not known in a hadron collider;
+a significant contribution to the background due to the following decay mode:
+$B \rightarrow D^* H_c X$, as these decay modes have similar $m^2_{miss}$ and
+$E^{*}_l$ distributions very similar to the signal \cite{Ciezarek:2017yzh};
+because the charge neutral particle resolution is not very good, a particular
+decay mode, namely $\overline{B}^0 \rightarrow D^{*+} \tau^- \bar{\nu}_\tau$, is
+chosen so that all visible final state particles are charged.
+
+Without the $B \overline{B}$ rest frame, tagging algorithms used in the $B$
+factory measurements cannot be applied.
+This problem is solved by \emph{rest frame approximation}, a technique developed
+by the analysis:
+Assuming $\vec{(p_{B})_T}$ is unchanged, approximate $(p_{B})_z$ by the
+following:
+\begin{equation}
+    (p_{B})_z = \frac{m_B}{m_{reco}} (p_{reco})_z
+\end{equation}
+with $m_B$ the known $B$ mass.
+This is shown to have sufficient resolution \cite{LHCb:PhysRevLett.115.111803}.
+
+The additional hadronic background is constrained by templates generated by
+simulated data sample, with additional correction fitted from the
+$D^{*+} \mu^- K^{\pm}$ control sample \cite{LHCb:PhysRevLett.115.111803}.
+From \autoref{fig:babar_lhcb_fit_comparison}, we see that backgrounds of $B$
+factories and LHCb have very different composition.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figs/babar_lhcb_fit_comparison.pdf}
+    \caption{
+        Comparison between fitted data from \BaBar/ and LHCb.
+    }
+    \label{fig:babar_lhcb_fit_comparison}
+\end{figure}
+
+% 2018 LHCb hadronic tau decay: tau -> pi pi pi
 
 \section{Outlook for LHCb Run 2 \RDDst/ measurements}
 % Expected improvements
 % Remember: Run 2 supposedly has better pile-ups.
-
 % Current progress
 
 \PRLrule
