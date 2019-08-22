@@ -1,7 +1,10 @@
-Leptons participate in electroweak interaction only;
-the interaction can be described by a Lagrangian of the following form:
+Leptons participate in electroweak interaction only,
+which can be described by a Lagrangian of the following form:
 $\Lden{ew} = \Lden{gauge} + \Lden{f} + \Lden{\phi} + \Lden{Yuk}$.
-The fermion part of \Lden{ew} reads \cite{Langacker:2010zza}:
+
+Leptons require a gauge boson to interact with other particles.
+Before leptons acquire their mass, all of their interactions are described by the fermionic part of the Lagrangian \Lden{f}, 
+which reads \cite{Langacker:2010zza}:
 \begin{align}
     \Lden{f} = \sum_{l = 1}^F \Big(
         & \bar{\spin{q}}^0_{lL} i \fsl{D} \spin{q}^0_{lL} +
@@ -13,37 +16,14 @@ The fermion part of \Lden{ew} reads \cite{Langacker:2010zza}:
     \Big)
 \end{align}
 where the number $F$, empirically 3, of fermion flavors is summed over, and
-$L,R$ denote $SU(2)_L$ doublet\footnote{
+$L,R$ denote $SU(2)_L$ doublet and singlet in each flavor generation.
+The SM $SU(2)_L$ lepton field is denoted by $\spin{l}^0_{lL}$\footnote{
     The left-handed lepton doublet is defined as:
     $\spin{l}^0_{lL} = \begin{pmatrix} \nu_l \\ l \end{pmatrix}$,
     where $l$ denotes lepton flavor.
-}
-and singlet in each flavor generation.
-From the Lagrangian we see that the interactions between fermions and gauge
-bosons (the interactions are embedded in the \fsl{D} operator) is independent
-of their flavor.
-But this is only an incomplete picture:
-Fermions acquire their mass through their interaction with the Higgs bosons,
-which is omitted above.
-
-No mass term of the form $m \overline{\Psi} \Psi$ is permitted, since it would
-spoil $SU(2)$ symmetry of the Lagrangian\footnote{
-    To be precise, \Lden{ew} is locally invariant under the transformations in
-    $SU(2)_L \otimes U(1)$ group.
 }.
-Instead, we add a doublet scalar field $\Phi$ interacting on both gauge bosons
-and fermions.
-After spontaneous symmetry breaking of the vacuum state, the Lagrangian remains
-unbroken, and the new terms in the Lagrangian are interpreted as mass terms.
-We inspect the mass terms for the leptons \cite{Langacker:2010zza}\footnote{
-    The notation has been simplified.
-}:
-\begin{equation}
-    m_l \equiv \Gamma_l \frac{\nu}{\sqrt{2}}
-\end{equation}
-with $\nu$ interpreted as vacuum expectation value of $\Phi$.
-This shows that leptons coupling stronger to the $\Phi$ (Higgs) field will be
-more massive.
 
-This completes the picture.
-Now we see that SM demands LFU, except for the Higgs coupling.
+From the Lagrangian we see that the interactions between fermions and gauge
+bosons (the interactions are embedded in the \fsl{D} operator) are independent
+of their flavor.
+This is known as LFU.
