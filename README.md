@@ -1,4 +1,4 @@
-# umd_phd_candidacy_paper [![Build status](https://travis-ci.com/yipengsun/umd_phd_candidacy_paper.svg?master)](https://travis-ci.com/yipengsun/umd_phd_candidacy_paper)
+# umd_phd_candidacy_paper [![Build status](https://travis-ci.com/yipengsun/umd_phd_candidacy_paper.svg?branch=master)](https://travis-ci.com/yipengsun/umd_phd_candidacy_paper)
 Preliminary research paper to fulfill UMD physics PhD requirement.
 
 ## License
