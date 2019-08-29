@@ -17,4 +17,4 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/data \
         --entrypoint latexmk \
-        yipengsun/umd_phd_candidacy_paper:latest"
+        yipengsun/umd_phd_candidacy_paper:latest
