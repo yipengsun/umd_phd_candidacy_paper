@@ -160,11 +160,11 @@ defined as\footnote{
 \begin{equation}
     \RDDst/ \equiv \frac{
         \mathcal{B}\left(
-            B^{0,-} \rightarrow D^{+,0(*)} \tau^- \overline{\nu}_\tau
+            B \rightarrow D^{(*)} \tau^- \overline{\nu}_\tau
         \right)
     }{
         \mathcal{B}\left(
-            B^{0,-} \rightarrow D^{+,0(*)} \mu^- \overline{\nu}_\mu
+            B \rightarrow D^{(*)} \ell^- \overline{\nu}_\ell
         \right)
     }
 \end{equation}
@@ -231,10 +231,12 @@ in \autoref{fig:rdrds_spring2019}.
 \end{figure}
 
 % B-factory measurements
-As mentioned in \autoref{sec:babar}, $B$ factories, such as \BaBar/ and BELLE,
-know the momenta of the $B \overline{B}$ system exactly.
-By tagging and reconstructing the other $B$, known as $B_{tag}$, the momentum of
-the signal $B_{sig}$, which decays semileptonically, can be inferred.
+\subsection{Measurements at the $B$ factories} \label{sec:meas_bfactories}
+As described in \autoref{sec:babar}, the $B$ factories
+can estimate the momenta of the $B \overline{B}$ system precisely by tagging and reconstructing the other $B$, known as $B_{tag}$. By subtracting the momentum
+of $B_{tag}$ to that of initial $e^+e^-$ system, the momentum of
+the signal $B_{sig}$, which decays semileptonically and thus contains unreconstructed
+neutrinos in the final state, can be inferred.
 
 \BaBar/ and BELLE independently developed two types of tagging algorithms:
 semileptonic tagging and hadronic tagging.
@@ -242,7 +244,7 @@ Semileptonic tagging finds $B_{tag}$ with the following decay:
 $B^- \rightarrow l^- \bar{\nu}_l$, where $l$ is a $e$ or $\mu$.
 This has the advantage of a larger branching ratio, thus more ($\approx 1\%$)
 \Y4S/ events are tagged.
-However, in this type of events, at least two neutrinos are presents, which
+However, in this type of events, at least two neutrinos are present, which
 makes the reconstruction of $p_{B_{sig}}$ less precise \cite{Ciezarek:2017yzh}.
 
 On the other hand, hadronic tagging searches over a very large number of
@@ -253,8 +255,13 @@ hadronically, no neutrino is present in the final product.
 This makes the reconstructed momentum of $B_{sig}$ very
 precise \cite{Lees:2013uzd,Ciezarek:2017yzh}.
 
-$B$ factory analyses also choose a particular decay mode of $\tau$:
-$\tau^- \rightarrow l^- \nu_\tau \bar{\nu}_l$.
+All $B$ factory measurements choose a particular decay mode of the $\tau$:
+$\tau^- \rightarrow l^- \nu_\tau \bar{\nu}_l$. In this way, the signal and
+he normalization $B \rightarrow D^{(*)} \ell^- \overline{\nu}_\ell$ decays
+are reconstructed in the same final state, leading to the cancelation of 
+several sources of experimental uncertainty in the \RDDst/ ratios.
+
+The signal and normalization yields are extracted ...
 Thus the signal mode will have three neutrinos in the final product,
 whereas the normalization mode only one.
 By looking at the missing mass of the $B_{sig}$, defined as:
@@ -293,6 +300,7 @@ in \autoref{sec:lhcb}.
 This is the main advantage of LHCb.
 
 % 2015 LHCb leptonic tau decay
+\subsection{Measurements at LHCb} \label{sec:meas_lhcb}
 The 2015 LHCb \RDst/ result, the first \RDst/ measurement at a hadron collider,
 is $2.1\sigma$ larger than SM prediction \cite{LHCb:PhysRevLett.115.111803}.
 This analysis is heavily inspired by the preview $B$ factory measurements, with
