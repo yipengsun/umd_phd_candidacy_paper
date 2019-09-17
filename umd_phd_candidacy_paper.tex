@@ -241,28 +241,43 @@ neutrinos in the final state, can be inferred.
 \BaBar/ and BELLE independently developed two types of tagging algorithms:
 semileptonic tagging and hadronic tagging.
 Semileptonic tagging finds $B_{tag}$ with the following decay:
-$B^- \rightarrow l^- \bar{\nu}_l$, where $l$ is a $e$ or $\mu$.
+$B^- \rightarrow D^{(*)} \ell^- \bar{\nu}_\ell$, where $\ell$ is a $e$ or $\mu$.
 This has the advantage of a larger branching ratio, thus more ($\approx 1\%$)
 \Y4S/ events are tagged.
-However, in this type of events, at least two neutrinos are present, which
+However, in this type of events, Both the $B_{tag}$ and $B_{sig}$ side have at least one missing neutrino, which
 makes the reconstruction of $p_{B_{sig}}$ less precise \cite{Ciezarek:2017yzh}.
 
 On the other hand, hadronic tagging searches over a very large number of
 hadronic decay chains of $B$ for each \Y4S/ event, tagging the ones that match
 one of the known modes.
 This has a smaller tagging rate ($\approx 0.3$), but because $B_{tag}$ decays
-hadronically, no neutrino is present in the final product.
+hadronically, no missing neutrino is present in the tagged final product.
 This makes the reconstructed momentum of $B_{sig}$ very
 precise \cite{Lees:2013uzd,Ciezarek:2017yzh}.
 
 All $B$ factory measurements choose a particular decay mode of the $\tau$:
-$\tau^- \rightarrow l^- \nu_\tau \bar{\nu}_l$. In this way, the signal and
+$\tau^- \rightarrow \ell^- \nu_\tau \bar{\nu}_\ell$. In this way, the signal and
 he normalization $B \rightarrow D^{(*)} \ell^- \overline{\nu}_\ell$ decays
-are reconstructed in the same final state, leading to the cancelation of 
+are reconstructed in the same final state, leading to the cancellation of 
 several sources of experimental uncertainty in the \RDDst/ ratios.
 
-The signal and normalization yields are extracted ...
-Thus the signal mode will have three neutrinos in the final product,
+In 2013 \BaBar/ result,
+Non-$B \overline{B}$ background and misreconstructed events are suppressed by
+requiring a tag, together with the requirement of having a $D^{(*)}$ meson and a
+charged lepton on $B_{sig}$ \cite{Ciezarek:2017yzh}.
+
+The main background remaining is semileptonic $B$ decays to $D^{**}$, which has
+similar $m^2_{miss}$ distribution to the signal.
+The $D^{**}$ mode is reconstructed from $D^{(*)}\pi^0\ell$ control samples.
+They can be differentiated after the fit from the signal by looking at the distribution of
+$E^{*}_l$, the energy of the charged lepton in the $B$ rest
+frame, because the background distribution extends to higher
+energy \cite{Ciezarek:2017yzh}.
+
+The signal and normalization yields are extracted from an extended, unbinned maximum-likelihood fit to two-demisional $m^2_{miss}-|\vec{p}^*_\ell|$ distributions, with $D^{(*)}\ell$ and $D^{(*)}\pi^0\ell$ as inputs \cite{Lees:2013uzd}.
+Note that the $|\vec{p}^*_\ell|$ can be readily converted to $E^*_\ell$.
+The fit result is shown in \autoref{fig:babar_lhcb_fit_comparison}.
+The signal mode will have three neutrinos in the final product,
 whereas the normalization mode only one.
 By looking at the missing mass of the $B_{sig}$, defined as:
 \begin{equation}
@@ -270,24 +285,12 @@ By looking at the missing mass of the $B_{sig}$, defined as:
 \end{equation}
 The signal, which has a non-zero $m^2_{miss}$, can be readily differentiated
 from the normalization, which does have a $m^2_{miss} \approx 0$.
-
-Non-$B \overline{B}$ background and misreconstructed events are suppressed by
-requiring a tag, together with the requirement of having a $D^{(*)}$ meson and a
-charged lepton on $B_{sig}$ \cite{Ciezarek:2017yzh}.
-
-The main background remaining is semileptonic $B$ decays to $D^{**}$, which has
-similar $m^2_{miss}$ distribution to the signal.
-They can be differentiated from the signal by looking at the distribution of
-$E^{*}_l$, the energy of the charged lepton in the $B$ rest
-frame, because the background distribution extends to higher
-energy \cite{Ciezarek:2017yzh}.
-
 The 2013 \BaBar/ result used a Gaussian non-parametric kernel estimator in the
 fitting process, because it allows for straightforward treading between variance
 and bias \cite{Lees:2013uzd}, resulting in a better fit result.
 
 % BELLE measurements
-Other than the \BaBar/ result mentioned at the beginning of this section,
+Other than the \BaBar/ result described above,
 BELLE measured semileptonic $B$ decays with $\tau$ decays both
 leptonically and hadronically.
 Both semileptonic and hadronic tagging were used for the leptonic $\tau$ decay;
