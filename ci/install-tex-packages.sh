@@ -55,19 +55,20 @@ tlmgr install footnotehyper \
               xurl \
               || exit 1
 
+# Install package for Feynman diagram drawing
+tlmgr install pgf \
+              pgfopts \
+              tikz-feynman \
+              || exit 1
+
 # Install other packages needed for this document
 tlmgr install latexmk \
               siunitx \
               titlesec \
               cleveref \
               preprint \
+              placeins \
               || exit 1
-
-# Install package for Feynman diagram drawing
-#tlmgr install pgf \
-#              pgfopts \
-#              tikz-feynman \
-#              || exit 1
 
 ################################################################################
 # Trim down (possibly large amounts of) installed artifacts such as docs.      #
