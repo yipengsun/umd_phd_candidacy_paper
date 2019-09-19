@@ -121,13 +121,9 @@
 \maketitle
 
 \begin{abstract}
-    What is LFUV? (FU physics, FUV physics)
-    Why semileptonic decays (good thing about form factor)?
-    A historical review, starting from 2012 BaBar;
-    Talk about Phoebe's run 1 analyses.
-    Talk about what we are doing.
-    Talk about expected improvements and drawbacks of our upcoming analysis compared
-    to run 1.
+    The Standard Model expects all leptons behave exactly the same, except in their couplings to the Higgs bosons, a feature called Lepton Flavor Universality.
+    However, measurements from \BaBar/, BELLE, and LHCb experiments showed tension with this expectation.
+    This paper briefly reviews the theoretical foundations of Lepton Flavor Universality, the recent results challenging it, and the prospect for a resolution.
 \end{abstract}
 
 \section{Introduction}
@@ -162,7 +158,7 @@ $B^- \rightarrow D^{(*)} l^- \overline{\nu}_l$, is a more significant one, where
 The difference in decay rates in these measurements is typically characterized by \RDDst/,
 defined as\footnote{
     $\mathcal{B}$ denotes branching fraction.
-    $\ell$ stands for light leptons, namely a $e$ or a $\mu$, but not a $\tau$.
+    $\ell$ stands for light leptons, namely an $e$ or a $\mu$, but not a $\tau$.
 }:
 \begin{equation}
     \RDDst/ \equiv \frac{
@@ -236,6 +232,10 @@ in \autoref{fig:rdrds_spring2019}.
 
 \begin{table}[ht]
     \centering
+    \caption{
+        \RDDst/ measurements from $B$ factories and LHCb \cite{HFLAV:2019}.
+    }
+    \label{tab:results}
     \begin{tabular}{lll}
         \toprule
         Experiment  &  \RDst/                               &  \RD/                         \\
@@ -247,10 +247,6 @@ in \autoref{fig:rdrds_spring2019}.
         LHCb        &  $0.280 \pm 0.018 \pm 0.029$          &  -                            \\
         \bottomrule
     \end{tabular}
-    \caption{
-        \RDDst/ measurements from $B$ factories and LHCb \cite{HFLAV:2019}.
-    }
-    \label{tab:results}
 \end{table}
 
 \subsection{Measurements at the $B$ factories} \label{sec:meas_bfactories}
@@ -259,34 +255,34 @@ in \autoref{fig:rdrds_spring2019}.
 \subsection{Measurements at LHCb} \label{sec:meas_lhcb}
 \input{include/measurements/01-lhcb_measurements.tex}
 
-\section{Outlooks}
-The testing of LFU with \RDDst/ remains an outstanding problem in the precision
+\section{Outlook}
+The testing of LFU remains an outstanding problem in precision
 physics.
-More measurements are needed before any conclusion can be drawn.
-As seen in \autoref{tab:results}, $B$ factory measurement uncertainties are typically dominated by their statistics.
-BELLE is undergoing an upgrade in the hope to mitigate the problem.
-As of today, LHCb has not published their measurements on \RD/.
-This will change in the near future:
-Measurement of both \RD/ and \RDst/ with run 1 data with the same semileptonic $B$ decay modes is in the work.
-At the same time, studies on the updating previous measurements with run 2 data has begun.
+More measurements are needed before any final conclusion can be drawn.
+As seen in \autoref{tab:results}, the total uncertainties of $B$ factory measurements are dominated by their statistical uncertainties.
+In the hope to mitigate this problem, BELLE has recently upgraded their facilities and
+aim to take a data sample with an integrated luminosity 50 times larger than that of the previous $B$ 
+factories \cite{Abe:2010gxa}.
 
+In addition to the measurements from $B$ factories, it is crucial to have independent validations from LHCb, an experiment that has very different sources of systematic uncertainties.
+It is expected that LHCb will publish their first combined \RD/ and \RDst/ measurements in the near future based on the \SI{8}{TeV} dataset (\SI{3.2}{fb^{-1}}).
+Additionally, an update of this measurement based on the \SI{13}{TeV} dataset (\SI{6.0}{fb^{-1}}) has begun.
 % Expected improvements
 % Remember: Run 2 supposedly has better pile-ups.
 % Current progress
-It is expected that run 2 data sample size is around 4 times to that of the run 1, 
-due to higher integrated luminosity and larger $B \bar{B}$ production
-cross section.
-An early study applied similar selections for $B \rightarrow D^* \tau^- \bar{\nu}_\tau$ 
-to 2012 (part of run 1) and 2016 (part of the run 2) data, 
-and found out that the binned data sample size is up to 5 times in run 2,
+The number of signal events is expected to increase significantly,
+thanks to higher integrated luminosity, a larger $B \bar{B}$ production
+cross section, and a new dedicated trigger.
+An preliminary study shows that the gain might be as high as a factor of 5 per fb$^{-1}$, 
 as shown in \autoref{fig:lhcb_run2}.
-This is deemed optimistic, and more work is needed to validate the claim.
+%This is deemed optimistic, and more work is needed to validate the claim.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/lhcb_run2.pdf}
     \caption{
-        Preliminary study of the LHCb run 2 data.
+        Preliminary study of the comparison between \SI{8}{TeV} and \SI{13}{TeV} LHCb data;
+        the blue component corresponds to a subset of \SI{8}{TeV} data from 2012 (\SI{0.99}{fb^{-1}}), and the red to a subset of \SI{13}{TeV} data from 2016 (\SI{0.84}{fb^{-1}}).
         Unpublished result.
     }
     \label{fig:lhcb_run2}
@@ -296,14 +292,13 @@ This is deemed optimistic, and more work is needed to validate the claim.
 % R(J/Psi): B_c -> J/Psi l nu_l
 % Lambda_b -> Lambda_c l nu_l
 % These provides independent background
-Aside from the $B \rightarrow D^{(*)} \ell \nu_\ell$ decay modes,
-More modes, such as $B_c \rightarrow J/\Psi \ell \nu_\ell$ and
-$\Lambda_b \rightarrow \Lambda_c \ell \nu_\ell$ are needed to cross validate the
-results.
-% Need BELLE II for separate validation
-Since \BaBar/ has been shut down, it is crucial to have another experiment to
-validate future LHCb results.
-BELLE will fulfill that role.
+If NP exists and were to affect the $B \rightarrow D^{(*)} \tau^- \bar{\nu}_\tau$ decays,
+other $B$ decays with the same $b \rightarrow c \tau^- \bar{\nu}_\tau$ transition should also be impacted.
+Examples include
+$B_c \rightarrow J/\Psi \ell \nu_\ell$ and
+$\Lambda_b \rightarrow \Lambda_c \ell \nu_\ell$.
+Recent result \cite{} found tension in the former, and measurements are in preparation for the latter.
+Given all the upcoming measurements from the upgraded BELLE and LHCb, a resolution to of present anomalies should be achievable in the next few years.
 
 \FloatBarrier
 \PRLrule
