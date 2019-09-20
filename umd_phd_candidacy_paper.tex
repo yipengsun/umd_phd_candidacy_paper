@@ -39,11 +39,6 @@
 % Figure
 \usepackage{float,graphicx}
 
-% Force caption of tables on top
-\usepackage{float}
-\floatstyle{plaintop}
-\restylefloat{table}
-
 % Feynman slash notation
 \usepackage{centernot}
 \newcommand{\fsl}[1]{\ensuremath{\centernot{#1}}}
@@ -263,6 +258,11 @@ in \autoref{fig:rdrds_spring2019}.
 
 \begin{table}[ht]
     \centering
+    \caption{
+        \RDDst/ measurements from $B$ factories and LHCb \cite{HFLAV:2019}.
+    }
+    \label{tab:results}
+    \vspace{1em}
     \begin{tabular}{lll}
         \toprule
         Experiment  &  \RDst/                               &  \RD/                         \\
@@ -275,10 +275,6 @@ in \autoref{fig:rdrds_spring2019}.
         BELLE       &  $0.283 \pm 0.018 \pm 0.014$          &  $0.307 \pm 0.037 \pm 0.016$  \\
         \bottomrule
     \end{tabular}
-    \caption{
-        \RDDst/ measurements from $B$ factories and LHCb \cite{HFLAV:2019}.
-    }
-    \label{tab:results}
 \end{table}
 
 \subsection{Measurements at the $B$ factories} \label{sec:meas_bfactories}
