@@ -39,6 +39,11 @@
 % Figure
 \usepackage{float,graphicx}
 
+% Force caption of tables on top
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
 % Feynman slash notation
 \usepackage{centernot}
 \newcommand{\fsl}[1]{\ensuremath{\centernot{#1}}}
@@ -108,6 +113,23 @@
 \def\RD/{\ensuremath{\mathcal{R}(D)}}
 \def\RDst/{\ensuremath{\mathcal{R}(D^{*})}}
 \def\RDDst/{\ensuremath{\mathcal{R}(D^{(*)})}}
+\def\DDst/{\ensuremath{D^{(*)}}}
+\def\Dst/{\ensuremath{D^*}}
+\def\Dstst/{\ensuremath{D^{**}}}
+\def\TauLepMode/{\ensuremath{
+    \tau^- \rightarrow \ell^- \nu_\tau \bar{\nu}_\ell
+}}
+\def\TauHadMode/{\ensuremath{
+    \tau^- \rightarrow \pi^- \pi^+ \pi^- \nu_\tau
+}}
+
+\newcommand{\BMesonMode}[2]{\ensuremath{
+    B \rightarrow #2 #1^- \overline{\nu}_#1
+}}
+
+\newcommand{\BDDstMode}[1]{\BMesonMode{#1}{\DDst/}}
+\newcommand{\BDstMode}[1]{\BMesonMode{#1}{\Dst/}}
+\newcommand{\BDMode}[1]{\BMesonMode{#1}{D}}
 
 % Title info
 \title{Review on testing lepton flavor universality in semileptonic channels}
@@ -121,9 +143,14 @@
 \maketitle
 
 \begin{abstract}
-    The Standard Model expects all leptons behave exactly the same, except in their couplings to the Higgs bosons, a feature called Lepton Flavor Universality.
-    However, measurements from \BaBar/, BELLE, and LHCb experiments showed tension with this expectation.
-    This paper briefly reviews the theoretical foundations of Lepton Flavor Universality, the recent results challenging it, and the prospect for a resolution.
+    The Standard Model expects all leptons behave exactly the same, except in
+    their couplings to the Higgs bosons, a feature called lepton flavor
+    universality.
+    However, measurements from \BaBar/, BELLE, and LHCb experiments showed
+    tension with this expectation.
+    This paper briefly reviews the theoretical foundations of lepton flavor
+    universality, the recent results challenging it, and the prospect for a
+    resolution.
 \end{abstract}
 
 \section{Introduction}
@@ -131,7 +158,8 @@ The Standard Model (SM) has been very successful in describing the interactions
 between elementary particles such as quarks and leptons.
 The theory has been tested experimentally to a very high precision.
 However, there are phenomena that cannot be explained by the SM, such as
-the observed matter-antimatter asymmetry in the universe, hinting that there might be New Physics (NP) beyond the SM.
+the observed matter-antimatter asymmetry in the universe, hinting that there
+might be New Physics (NP) beyond the SM.
 One way to search for NP is to measure the decay rates of certain processes
 very precisely;
 rates that differ from the SM predictions may provide evidence for NP.
@@ -141,34 +169,33 @@ flavors:
 Charged leptons, namely electron $e$, muon $\mu$, and tau $\tau$;
 their corresponding charge-neutral neutrinos: $\nu_e$, $\nu_\mu$ and $\nu_\tau$.
 SM assumes that all three flavors of leptons participate in all
-interactions with the same strength, except for the Higgs mechanism through which
-they acquire their mass.
-This is known as lepton flavor universality (LFU).
+interactions with the same strength, except for the Higgs mechanism through
+which they acquire their mass.
+This is known as Lepton Flavor Universality (LFU).
 
-LFU has been tested by different collaborations, including \BaBar/, BELLE, and LHCb.
+LFU has been tested by different collaborations, including \BaBar/, BELLE, and
+LHCb.
 Many precision measurements, such as the decay rate
-of $K^- \rightarrow e^- \nu_e$ versus $K^- \rightarrow \mu^- \nu_\mu$\footnote{
+of $K \rightarrow e^- \bar{\nu}_e$ versus
+$K \rightarrow \mu^- \bar{\nu}_\mu$\footnote{
     Unless specified, charge conjugation is assumed throughout the paper.
 }, have been performed.
 So far, no definite violation of LFU has been detected \cite{Ciezarek:2017yzh}.
 
 This paper provides a review on recent measurements that challenge LFU.
 Among which the semileptonic decay of $B$ mesons, such as
-$B^- \rightarrow D^{(*)} l^- \overline{\nu}_l$, is a more significant one, where the $D^{(*)}$ denotes a $D$ or $D^*$ meson.
-The difference in decay rates in these measurements is typically characterized by \RDDst/,
-defined as\footnote{
+\BDDstMode{\ell}, is a more significant one, where the \DDst/ denotes a $D$
+or \Dst/ meson.
+The difference in decay rates in these measurements is typically characterized
+by \RDDst/, defined as\footnote{
     $\mathcal{B}$ denotes branching fraction.
     $\ell$ stands for light leptons, namely an $e$ or a $\mu$, but not a $\tau$.
 }:
 \begin{equation}
     \RDDst/ \equiv \frac{
-        \mathcal{B}\left(
-            B \rightarrow D^{(*)} \tau^- \overline{\nu}_\tau
-        \right)
+        \mathcal{B}\left( \BDDstMode{\tau} \right)
     }{
-        \mathcal{B}\left(
-            B \rightarrow D^{(*)} \ell^- \overline{\nu}_\ell
-        \right)
+        \mathcal{B}\left( \BDDstMode{\ell} \right)
     }
 \end{equation}
 
@@ -179,13 +206,14 @@ many collaborations are working on more precise measurements to provide a
 definite answer.
 
 In this paper, we begin with a theoretical review on why SM manifests LFU;
-extensions to SM, such as 2-Higgs doublet model (2HDM), to permit LFUV;
-and advantages of using semileptonic channels for this type of measurements.
+Higgs mechanism to show the couplings between different flavor of leptons and
+Higgs bosons are different;
+extensions to SM, such as 2-Higgs-Doublet Model (2HDM), to permit LFUV;
 We then review and compare colliders and detectors, such as \BaBar/ at PEP-II
 and LHCb at the Large Hadron Collider (LHC), used in the testing of LFU.
 After that, we will review current experimental results.
-Finally, we provide an overlook on prospect for updating the \RDDst/ measurement with LHCb Run
-2 data.
+Finally, we provide an overlook on future measurement for a possible resolution
+to current anomalies.
 
 \section{Theory}
 \subsection{Lepton flavor universality} \label{sec:lfu}
@@ -199,9 +227,12 @@ Finally, we provide an overlook on prospect for updating the \RDDst/ measurement
 
 \section{Production and detection of $B$ mesons in different experiments}
 $B$ mesons can be generated by two types of colliders:
-$e^- e^+$ colliders, which are often referred as ``$B$ factories", and hadron colliders.
-We will review $B$ production and detection in detail at \BaBar/ and LHCb, representing $B$ factory and hadron collider.
-BELLE is another $B$ factory that shares most features with \BaBar/, and its details will not be provided.
+$e^- e^+$ colliders, which are often referred as ``$B$ factories", and hadron
+colliders.
+We will review $B$ production and detection in detail at \BaBar/ and LHCb,
+representing $B$ factory and hadron collider.
+BELLE is another $B$ factory that shares most features with \BaBar/, and its
+details will not be provided.
 
 \subsection{\BaBar/ at PEP-II} \label{sec:babar}
 \input{include/detectors/00-babar.tex}
@@ -232,10 +263,6 @@ in \autoref{fig:rdrds_spring2019}.
 
 \begin{table}[ht]
     \centering
-    \caption{
-        \RDDst/ measurements from $B$ factories and LHCb \cite{HFLAV:2019}.
-    }
-    \label{tab:results}
     \begin{tabular}{lll}
         \toprule
         Experiment  &  \RDst/                               &  \RD/                         \\
@@ -245,8 +272,13 @@ in \autoref{fig:rdrds_spring2019}.
         LHCb        &  $0.336 \pm 0.027 \pm 0.030$          &  -                            \\
         BELLE       &  $0.270 \pm 0.035^{+0.028}_{-0.025}$  &  -                            \\
         LHCb        &  $0.280 \pm 0.018 \pm 0.029$          &  -                            \\
+        BELLE       &  $0.283 \pm 0.018 \pm 0.014$          &  $0.307 \pm 0.037 \pm 0.016$  \\
         \bottomrule
     \end{tabular}
+    \caption{
+        \RDDst/ measurements from $B$ factories and LHCb \cite{HFLAV:2019}.
+    }
+    \label{tab:results}
 \end{table}
 
 \subsection{Measurements at the $B$ factories} \label{sec:meas_bfactories}
@@ -259,30 +291,39 @@ in \autoref{fig:rdrds_spring2019}.
 The testing of LFU remains an outstanding problem in precision
 physics.
 More measurements are needed before any final conclusion can be drawn.
-As seen in \autoref{tab:results}, the total uncertainties of $B$ factory measurements are dominated by their statistical uncertainties.
-In the hope to mitigate this problem, BELLE has recently upgraded their facilities and
-aim to take a data sample with an integrated luminosity 50 times larger than that of the previous $B$ 
-factories \cite{Abe:2010gxa}.
+As seen in \autoref{tab:results}, the total uncertainties of $B$ factory
+measurements are dominated by their statistical uncertainties.
+In the hope to mitigate this problem, BELLE has recently upgraded their
+facilities and aim to take a data sample with an integrated luminosity 50 times
+larger than that of the previous $B$ factories \cite{Abe:2010gxa}.
 
-In addition to the measurements from $B$ factories, it is crucial to have independent validations from LHCb, an experiment that has very different sources of systematic uncertainties.
-It is expected that LHCb will publish their first combined \RD/ and \RDst/ measurements in the near future based on the \SI{8}{TeV} dataset (\SI{3.2}{fb^{-1}}).
-Additionally, an update of this measurement based on the \SI{13}{TeV} dataset (\SI{6.0}{fb^{-1}}) has begun.
+In addition to the measurements from $B$ factories, it is crucial to have
+independent validations from LHCb, an experiment that has very different sources
+of systematic uncertainties.
+It is expected that LHCb will publish their first combined \RD/ and \RDst/
+measurements in the near future based on the \SI{8}{TeV} dataset
+(\SI{3.2}{fb^{-1}}).
+Additionally, an update of this measurement based on the \SI{13}{TeV} dataset
+(\SI{6.0}{fb^{-1}}) has begun.
 % Expected improvements
 % Remember: Run 2 supposedly has better pile-ups.
 % Current progress
-The number of signal events is expected to increase significantly,
-thanks to higher integrated luminosity, a larger $B \bar{B}$ production
-cross section, and a new dedicated trigger.
-An preliminary study shows that the gain might be as high as a factor of 5 per fb$^{-1}$, 
-as shown in \autoref{fig:lhcb_run2}.
+The number of signal events is expected to increase significantly, thanks to
+higher integrated luminosity, a larger $B \bar{B}$ production cross section, and
+a new dedicated trigger.
+An preliminary study shows that the gain might be as high as a factor of 5 per
+fb$^{-1}$, as shown in \autoref{fig:lhcb_run2}.
 %This is deemed optimistic, and more work is needed to validate the claim.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{figs/lhcb_run2.pdf}
     \caption{
-        Preliminary study of the comparison between \SI{8}{TeV} and \SI{13}{TeV} LHCb data;
-        the blue component corresponds to a subset of \SI{8}{TeV} data from 2012 (\SI{0.99}{fb^{-1}}), and the red to a subset of \SI{13}{TeV} data from 2016 (\SI{0.84}{fb^{-1}}).
+        Preliminary study of the comparison between \SI{8}{TeV} and \SI{13}{TeV}
+        LHCb data;
+        the blue component corresponds to a subset of \SI{8}{TeV} data from 2012
+        (\SI{0.99}{fb^{-1}});
+        the red to a subset of \SI{13}{TeV} data from 2016 (\SI{0.84}{fb^{-1}}).
         Unpublished result.
     }
     \label{fig:lhcb_run2}
@@ -292,13 +333,15 @@ as shown in \autoref{fig:lhcb_run2}.
 % R(J/Psi): B_c -> J/Psi l nu_l
 % Lambda_b -> Lambda_c l nu_l
 % These provides independent background
-If NP exists and were to affect the $B \rightarrow D^{(*)} \tau^- \bar{\nu}_\tau$ decays,
-other $B$ decays with the same $b \rightarrow c \tau^- \bar{\nu}_\tau$ transition should also be impacted.
-Examples include
-$B_c \rightarrow J/\Psi \ell \nu_\ell$ and
-$\Lambda_b \rightarrow \Lambda_c \ell \nu_\ell$.
-Recent result \cite{} found tension in the former, and measurements are in preparation for the latter.
-Given all the upcoming measurements from the upgraded BELLE and LHCb, a resolution to of present anomalies should be achievable in the next few years.
+If NP exists and were to affect the \BDDstMode{\tau} decays, other $B$ decays
+with the same $b \rightarrow c \tau^- \bar{\nu}_\tau$ transition should also be
+impacted.
+Examples include $B_c \rightarrow J/\Psi \ell^- \bar{\nu}_\ell$ and
+$\Lambda_b \rightarrow \Lambda_c \ell^- \bar{\nu}_\ell$.
+Recent result \cite{Aaij:2017tyk} found tension in the former, and measurements
+are in preparation for the latter.
+Given all the upcoming measurements from the upgraded BELLE and LHCb, a
+resolution to of present anomalies should be achievable in the next few years.
 
 \FloatBarrier
 \PRLrule
