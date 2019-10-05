@@ -1,7 +1,8 @@
 \documentclass[12pt,letterpaper]{article}
 
-%{{{ Package configuration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%
+% Packages %
+%%%%%%%%%%%%
 
 % Page margin
 \usepackage[margin=1in]{geometry}
@@ -97,12 +98,10 @@
 ]{biblatex}
 \addbibresource{umd_phd_candidacy_paper.bib}
 
-%}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% User-defined variables %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%{{{ User settings
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% User-defined variables
 \def\BaBar/{\textsc{BaBar}}
 \def\Y4S/{\ensuremath{\Upsilon(\text{4S})}}
 \def\RD/{\ensuremath{\mathcal{R}(D)}}
@@ -126,6 +125,10 @@
 \newcommand{\BDstMode}[1]{\BMesonMode{#1}{\Dst/}}
 \newcommand{\BDMode}[1]{\BMesonMode{#1}{D}}
 
+%%%%%%%%%%%%%%%%%%%%%
+% Document settings %
+%%%%%%%%%%%%%%%%%%%%%
+
 % Title info
 \title{
     A review of testing lepton flavor universality in semileptonic $B$ decays
@@ -133,8 +136,6 @@
 \author{Yipeng Sun}
 \affil{Department of Physics, University of Maryland}
 \date{\today}
-
-%}}}
 
 \begin{document}
 \maketitle
