@@ -1,5 +1,4 @@
-# umd_phd_candidacy_paper
-[![Github Action LaTex CI status](https://github.com/yipengsun/umd_phd_candidacy_paper/workflows/LaTeX%20CI/badge.svg)](https://github.com/yipengsun/umd_phd_candidacy_paper/actions)
+# umd_phd_candidacy_paper [![Github Action LaTex CI status](https://github.com/yipengsun/umd_phd_candidacy_paper/workflows/LaTeX%20CI/badge.svg)](https://github.com/yipengsun/umd_phd_candidacy_paper/actions)
 
 Preliminary research paper to fulfill UMD physics PhD requirement.
 
