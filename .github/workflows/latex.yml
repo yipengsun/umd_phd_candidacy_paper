@@ -7,14 +7,21 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Build the document in container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/data \
-        --entrypoint latexmk \
-        yipengsun/umd_phd_candidacy_paper:latest
+    - uses: actions/checkout@v2
+    - uses: cachix/install-nix-action@v15
+      with:
+          extra_nix_config: |
+              access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+
+    - run: nix develop --no-update-lock-file -c latexmk
+    - run: ls build
+
+    - uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        files: |
+          build/*.pdf
